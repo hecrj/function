@@ -19,20 +19,20 @@ pub trait Binary<A, B> {
     ///
     /// assert_eq!(add2(3), 5);
     /// ```
-    fn with(self, a: A) -> impl Fn(B) -> Self::Output
+    fn with(self, a: A) -> impl Fn(B) -> Self::Output + Clone + Send
     where
-        A: Clone;
+        A: Clone + Send;
 }
 
 impl<F, A, B, O> Binary<A, B> for F
 where
-    F: Fn(A, B) -> O,
+    F: Fn(A, B) -> O + Clone + Send,
 {
     type Output = O;
 
-    fn with(self, a: A) -> impl Fn(B) -> Self::Output
+    fn with(self, a: A) -> impl Fn(B) -> Self::Output + Clone + Send
     where
-        A: Clone,
+        A: Clone + Send,
     {
         move |b| self(a.clone(), b)
     }
