@@ -3,7 +3,11 @@ name = "function"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
+authors = ["Héctor Ramón Jiménez <hector@hecrj.dev>"]
 description = "A set of useful traits for your functional needs"
+repository = "https://github.com/hecrj/function"
+categories = ["mathematics", "rust-patterns"]
+keywords = ["functions", "functional", "currying", "pipeline"]
 
 [dependencies]
 
