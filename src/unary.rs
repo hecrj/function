@@ -3,8 +3,9 @@ pub trait Unary<A> {
     /// The return type of the function.
     type Output;
 
-    /// Takes the output of the current function and passes it as input to the
-    /// given one; effectively creating a [pipeline] or chain.
+    /// Creates a new function that takes the output of the current function
+    /// and passes it as input to the given one; effectively creating a
+    /// [pipeline] or chain.
     ///
     /// [pipeline]: https://en.wikipedia.org/wiki/Pipeline_(software)
     ///
