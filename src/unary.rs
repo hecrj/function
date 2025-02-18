@@ -22,7 +22,7 @@ pub trait Unary<A> {
     /// let is_half_even = halven.then(is_even);
     ///
     /// assert!(is_half_even(4));
-    /// assert!(!is_half_even(3));
+    /// assert!(!is_half_even(6));
     /// ```
     fn then<B>(
         self,

@@ -6,7 +6,7 @@ pub trait Binary<A, B> {
     /// Applies the first argument to the function and returns a
     /// new function that only takes the second argument.
     ///
-    /// This is effectively [currying](https://en.wikipedia.org/wiki/Currying).
+    /// This is called [partial application](https://en.wikipedia.org/wiki/Partial_application).
     ///
     /// ```
     /// use function::Binary;
