@@ -1,4 +1,4 @@
-/// A sequence of at least two values of a potentially distinct types.
+/// A sequence of at least two values of potentially distinct types.
 pub trait Tuple {
     /// The type of the first value.
     type First;
